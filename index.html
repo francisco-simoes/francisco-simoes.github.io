@@ -68,6 +68,35 @@
             margin-bottom: -10px;
         }
 
+        p.work-title {
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+        
+        p.work-authors {
+            font-size: 10px;
+            color: #4682b4;
+            margin-bottom: -8px;
+        }
+
+        p.work-subtitle {
+            font-size: 10px;
+            color: #000080;
+            margin-bottom: -6px;
+        }
+
+        p.work-description {
+            font-size: 12px;
+        }
+
+        div.work-piece{
+            /* display: grid; */
+            padding: 8px;
+            /* grid-template-columns: 50px 1fr; */
+        }
+
     </style>
 </head>
 
@@ -116,8 +145,72 @@
     </section>
 
     <section>
-        <h2 id="research">Research</h2>
-        <!-- Add your projects or work here -->
+        <h2 id="research">Research And Publications</h2>
+
+        <div class="work-piece">
+            <p class="work-title">
+              Fundamental Properties of Causal Entropy and Information Gain
+            </p>
+            <p class="work-authors">
+              Francisco N. F. Q. Simoes, Mehdi Dastani, Thijs van Ommen
+            </p>
+            <p class="work-subtitle">
+              Accepted for the 3rd conference of Causality Learning and Reasonig (CLeaR 2024) for oral presentation. To appear in its proceedings.
+            </p>
+            <p class="work-description">
+              Causality is cool...
+            </p>
+        </div>
+
+        <div class="work-piece">
+            <p class="work-title">
+              Causal Entropy and Information Gain for Measuring Causal Control
+            </p>
+            <p class="work-authors">
+              Francisco N. F. Q. Simoes, Mehdi Dastani, Thijs van Ommen
+            </p>
+            <p class="work-subtitle">
+              In Proceedings of the XI-ML workshop of the 26th European Conference on Artificial Intelligence (ECAI 2023)
+            </p>
+            <p class="work-description">
+              Causality is cool...
+            </p>
+        </div>
+
+        <div class="work-piece">
+            <p class="work-title">
+              Jaccard Kernel PCA in genotype and gene-burden data for ALS
+            </p>
+            <p class="work-authors">
+              Francisco N. F. Q. Simoes (supervisor: Kevin Kenna)
+            </p>
+            <p class="work-subtitle">
+              Report for my internship at the Utrecht Brain Center, part of the Utrecht Medical Center (2020).
+            </p>
+            <p class="work-description">
+                The project aimed to study whether one could enhance population stratification control in large-scale genetic studies of Amyotrophic lateral sclerosis (ALS) by utilizing Jaccard principal component analysis (jPCA) as an alternative to standard methods like PCA, which are ineffective for rare genetic variants.
+                To that end, I developed a set of scripts (written in R) capable of running jPCA on very large datasets (through parallelization) and another one allowing for arbitrary positive integers gene-burden values.
+            </p>
+        </div>
+
+        <div class="work-piece">
+            <p class="work-title">
+              The Monoidal Category of D-branes in a Kazama-Suzuki Model
+            </p>
+            <p class="work-authors">
+              Francisco N. F. Q. Simoes (supervisors: Stefan Vandoren, Ana Ros Camacho)
+            </p>
+            <p class="work-subtitle">
+              My Master's thesis. Written for completion of the MSc program in Theoretical Physics (2019).
+            </p>
+            <p class="work-description">
+                This thesis consists of an application of category theory to string theory.
+                Concretely, we show that the D-branes of the most prolific Kazama-Suzuki model (which is an N = 2 superconformal field theory with central charge c = 9) form a category finite on objects.
+                We furthermore prove that this category admits a notion of tensor product and thus a monoidal structure.
+                I believe this thesis can be useful to someone trying to understand  Kac-Moody algebras in the context of string theory, and representation theory of the Virasoro algebra in general.
+            </p>
+        </div>
+
     </section>
 
     <section>
