@@ -91,10 +91,70 @@
             font-size: 12px;
         }
 
+        p.shortwork-title {
+            font-size: 12px;
+            color: #4682b4;
+            margin-bottom: 2px;
+            margin-top: -2px;
+        }
+
+        p.date { /* same as title but other color and align*/
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: -10px;
+            color: #4682b4;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        p.date-vanilla {
+            font-size: 14px;
+            font-weight: bold;
+            color: #4682b4;
+            text-align: right;
+            padding-top: 3px;
+        }
+
+        p.past-explanation {
+            font-size: 10px;
+            color: #4682b4;
+            margin-bottom: -10px;
+            width: 265px
+        }
+
+        div.about {
+            display: grid;
+            grid-template-columns: 500px 300px;
+        }
+
         div.work-piece{
-            /* display: grid; */
             padding: 8px;
-            /* grid-template-columns: 50px 1fr; */
+        }
+
+        div.work-title-with-date {
+            display: grid;
+            grid-template-columns: 700px 100px;
+        }
+
+        div.past-with-date {
+            display: grid;
+            grid-template-columns: 200px 65px;
+            margin-bottom: -25px;
+        }
+
+        div.vert-centered {
+            display: flex;
+            align-items: center;
+        }
+
+        ul.no-top{
+            margin-top: -15px;
+        }
+
+        ul.small-list{
+            margin-top: -18px;
+            font-size: 11px; 
         }
 
     </style>
@@ -105,47 +165,116 @@
     <header>
         <nav>
             <a href="#me">About</a>
-            <a href="#research">Research</a>
-            <a href="#supervision-and-teaching">Supervision and Teaching</a>
-            <a href="#old-notes-and-code">Old Notes and Code</a>
-            <a href="#contact-me">Contact Me</a>
+            <a href="#research">Research & Publications</a>
+            <a href="#supervision-and-teaching">Supervision & Teaching</a>
+            <!-- <a href="#old-notes-and-code">Old Notes & Code</a> -->
+            <!-- <a href="#cv">Curriculum Vitae</a> -->
         </nav>
     </header>
 
     <section>
-        <h2 id="me">Francisco N. F. Q. Simoes</h2>
+        <h2 id="me">Francisco N. F. Q. Simoes &ensp; <a href="mailto:f.simoes@uu.nl" target="_blank"><i class="fas fa-envelope"></i></a></h2>
         <p class="affiliations"> Utrecht University &ndash; Department of Information and Computing Sciences &ndash; Intelligent Systems group </p>
         <p></p>
 
-        <div style="
-            display: grid;
-            grid-template-columns: 525px 265px;
-        ">
-            <div>
-                <p>I am a mathematical physicist by training (MSc) and currently a PhD student at the department of information and computing sciences of Utrecht University.</p>
-
-                <p>Currently looking at:</p>
-                <ul>
-                    <li>How to build useful abstractions from data making use of the interventionist framework of causal inference?</li>
-                    <li>How to use causal inference for traffic control in train networks?</li>
-                    <li>How to mathematically model causal concepts coming from philosophy of science literature that have not yet been made rigorous by the AI community?</li>
-                </ul>
-
-                <p>Some of my past programming, Data Science and AI projects can be found on <a href="https://github.com/francisco-simoes" target="_blank">my github page</a>.</p>
-
-                <p>In this website I store a selection of texts and notes, as well as links to some projects.</p>
-                <p>Many were written on Physics and Mathematics during my studies; others concern DS and AI topics.</p>
-
-                <p>Here you can also consult my CV.</p>
+        <div class="about">
+            <div class="vert-centered">
+                <p>I am currently a PhD candidate at the Department of Information and Computing Sciences of Utrecht University working on causal inference.
+                    My supervisors are Thijs van Ommen and Mehdi Dastani.
+                    My PhD project is part of a collaboration between ProRail and Utrecht University.</p>
             </div>
             <div>
                 <img src="images/formalishPhoto_square.jpg" alt="Your Name's Photo">
             </div>
         </div>
+
+        <div class="about vert-centered">
+            <div>
+                <p>
+                    My current research focuses on the construction of useful abstractions from data making use of the interventionist framework of causal inference.
+                    This has lead me to the study of modeling of properties of causal relationships using information theoretical quantities.
+                    The goal is to develop algorithms which learn representations possessing the desired properties, by making use of these information theoretical metrics.
+                    <!-- These properties often appear in the Philosophy of Science literature, but are still absent from the AI literature and have no rigorous mathematical treatment. -->
+                </p>
+                <p>
+                    In addition to exploring causal representation learning and information-based modeling of causal properties, I'm also investigating causal discovery when there's background knowledge and methods for selecting interventions in the presence of an SCM. These are topics that my Master's students have been working on.
+                </p>
+                <p>
+                    On the applied side, an objective of my PhD is to apply these developed methods to analyze train delay data provided by ProRail.
+                    The goal is to understand how causal inference can be utilized to enhance train traffic control.
+                </p>
+            </div>
+
+            <div>
+                <ul>
+                    <li>
+                        <div class="past-with-date">
+                            <p>PhD in Artificial Intelligence, Utrecht University</p>
+                            <p class="date-vanilla">2021-Now</p>
+                        </div>
+                        <p class="past-explanation">Causal Discovery, Intervention Selection, Representation Learning, Information Theory</p>
+                    </li>
+                    <li>
+                        <div class="past-with-date">
+                            <p>ML engineer & Data Scientist, Orbisk (Utrecht)</p>
+                            <p class="date-vanilla">2020-2021</p>
+                        </div>
+                        <p class="past-explanation">Computer Vision, API development</p>
+                    </li>
+                    <li>
+                        <div class="past-with-date">
+                            <p>Research internship at UMC's Bran Center</p>
+                            <p class="date-vanilla">2020</p>
+                        </div>
+                        <p class="past-explanation">Dimensionality reduction methods in a Genome-Wide Association Study (GWAS) of ALS.</p>
+                    </li>
+                    <li>
+                        <div class="past-with-date">
+                            <p>MSc in Theoretical Physics, Utrecht University.</p>
+                            <p class="date-vanilla">2017-2019</p>
+                        </div>
+                        <p class="past-explanation">Mathematical emphasis. Lie Algebras, Differential Geometry, Representation Theory, ...</p>
+                    </li>
+                    <li>
+                        <div class="past-with-date">
+                            <p>A la carte Mathematics units, University of Porto.</p>
+                            <p class="date-vanilla">2016-2017</p>
+                        </div>
+                            <p class="past-explanation">Topology, Group Theory, Logic, Functional Analysis, Manifolds, ...</p>
+                    </li>
+                    <li>
+                        <div class="past-with-date">
+                            <p>BSc in Physics, University of Porto.</p>
+                            <p class="date-vanilla">2013-2016</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+                <!-- <p>Some of my past programming, Data Science and AI projects can be found on <a href="https://github.com/francisco-simoes" target="_blank">my github page</a>.</p> -->
+
+                <!-- <p>In this website I store a selection of texts and notes, as well as links to some projects.</p> -->
+                <!-- <p>Many were written on Physics and Mathematics during my studies; others concern DS and AI topics.</p> -->
+                <!-- <p>Here you can also consult my CV.</p> -->
+
+
+    <!--     <h5>Affiliations & Memberships</h5> -->
+    <!--     <ul class="small-list"> -->
+    <!--       <li> ProRail (railway traffic and infrastructure). -->
+    <!--       <li> Nederlandse Vereniging voor Statistiek en Operations Research (VVSOR). Translation: Netherlands Society for Statistics and Operations Research. -->
+    <!--       <li> Netherlands Research School for Information and Knowledge Systems (SIKS). -->
+    <!--     </ul> -->
+
     </section>
 
     <section>
-        <h2 id="research">Research And Publications</h2>
+        <h2 id="research">Research & Publications</h2>
 
         <div class="work-piece">
             <p class="work-title">
@@ -158,13 +287,16 @@
               Accepted for the 3rd conference of Causality Learning and Reasonig (CLeaR 2024) for oral presentation. To appear in its proceedings.
             </p>
             <p class="work-description">
-              Causality is cool...
+                This research contributes to the formal understanding of the notions of causal entropy and causal information gain by establishing and analyzing fundamental properties of these concepts, including bounds and chain rules.
+                Furthermore, we elucidate the relationship between causal entropy and stochastic interventions.
+                We also propose definitions for causal conditional entropy and causal conditional information gain.
             </p>
         </div>
 
         <div class="work-piece">
             <p class="work-title">
               Causal Entropy and Information Gain for Measuring Causal Control
+              <a href="https://arxiv.org/abs/2309.07703" target="_blank"><i class="fa-solid fa-file"></i></a>
             </p>
             <p class="work-authors">
               Francisco N. F. Q. Simoes, Mehdi Dastani, Thijs van Ommen
@@ -173,13 +305,15 @@
               In Proceedings of the XI-ML workshop of the 26th European Conference on Artificial Intelligence (ECAI 2023)
             </p>
             <p class="work-description">
-              Causality is cool...
+                We introduce causal versions of entropy and mutual information, termed causal entropy and causal information gain, which are designed to assess how much control a feature provides over the outcome variable.
+                These newly defined quantities capture changes in the entropy of a variable resulting from interventions on other variables.
             </p>
         </div>
 
         <div class="work-piece">
             <p class="work-title">
               Jaccard Kernel PCA in genotype and gene-burden data for ALS
+              <a href="docs/jPCA_internship_summary.pdf" target="_blank"><i class="fa-solid fa-file"></i></a>
             </p>
             <p class="work-authors">
               Francisco N. F. Q. Simoes (supervisor: Kevin Kenna)
@@ -196,6 +330,7 @@
         <div class="work-piece">
             <p class="work-title">
               The Monoidal Category of D-branes in a Kazama-Suzuki Model
+              <a href="https://studenttheses.uu.nl/bitstream/handle/20.500.12932/34899/Thesis_Francisco_Simoes.pdf?sequence=1" target="_blank"><i class="fa-solid fa-file"></i></a>
             </p>
             <p class="work-authors">
               Francisco N. F. Q. Simoes (supervisors: Stefan Vandoren, Ana Ros Camacho)
@@ -211,29 +346,177 @@
             </p>
         </div>
 
+        <h4> Posters and Talks </h4>
+            <ul class="no-top">
+                <li> Presented poster at the European Causal Inference Meeting 2023 (EuroCIM 2023, Oslo).
+                  <p class="shortwork-title">
+                    Title: Going Beyond Causal Strength - An information theoretical metric of specificity in causal relationships
+                  </p>
+                <li> Presented poster at the AI Labs event 2023 together with my supervisee Vera Schoonderwoerd (Utrecht).
+                  <p class="shortwork-title">
+                    Title: Aspects of the causal structure of train delays - Abstracting train delay complexity & Learning delay relations from data
+                  </p>
+                <li> Oral presentation & poster for the ECAI23 workshop paper (Krakow).
+                <li> Oral presentation & poster as an encore paper at BNAIC23 (Delft).
+            </ul>
+
+
+
     </section>
 
     <section>
-        <h2 id="supervision-and-teaching">Supervision and Teaching</h2>
-        <!-- Add your projects or work here -->
+        <h2 id="supervision-and-teaching">Supervision & Teaching</h2>
+
+        <div class="work-piece">
+          <div class="work-title-with-date">
+            <p class="work-title">
+                [In Progress. Putative title: Graphical Rules for Smart Intervention Selection]
+            </p>
+            <p class="date">
+                2023-Present
+            </p>
+          </div>
+            <p class="work-authors">
+              Supervisee: Sem Yedema. Co-supervisor: Thijs van Ommen.
+            </p>
+            <p class="work-subtitle">
+              This Master's thesis was incorporated into the student's internship at ProRail.            </p>
+            <p class="work-description">
+              The goal of this project is to discover rules that help us minimize the number of interventions that need to be tested in order to find the optimal intervention for a given target.
+              More details to come.
+            </p>
+        </div>
+
+        <div class="work-piece">
+          <div class="work-title-with-date">
+            <p class="work-title">
+                Causal discovery from train network data with background knowledge
+            </p>
+            <p class="date">
+                2022-2023
+            </p>
+          </div>
+            <p class="work-authors">
+              Supervisee: Vera Schoonderwoerd. Co-supervisor: Thijs van Ommen.
+            </p>
+            <p class="work-subtitle">
+              This Master's thesis was incorporated into the student's internship at ProRail.            </p>
+            <p class="work-description">
+              The goal of this project was to learn an SCM describing train delay data provided by ProRail.
+              The student applied a modified version of the FCI algorithm to train delay data.
+              This algorithm took into account the background knowledge one has about causal relationships between train delays, making it feasible to learn the causal graph despite the high number of variables.
+              Each structural equation was then estimated by fine-tuning a neural network previously trained on the entire dataset, and which also incorporated exogenous variables external to the delay data.
+            </p>
+        </div>
+
+        <h3>Teaching</h3>
+
+            <div class="work-piece" style="margin-top: -15px">
+                <div class="work-title-with-date">
+                    <p class="work-title">
+                        Advanced Machine Learning - MSc Computer Science
+                    </p>
+                    <p class="date">
+                        2024
+                    </p>
+                </div>
+                <p class="work-subtitle">
+                    Tutorial coordinator; Guest lecturer (1 lecture); Teaching Assistant
+                </p>
+            </div>
+
+            <div class="work-piece">
+                <div class="work-title-with-date">
+                    <p class="work-title">
+                        Machine Learning - BSc Computer Science
+                    </p>
+                    <p class="date">
+                        2023
+                    </p>
+                </div>
+                <p class="work-subtitle">
+                    Tutorial coordinator; Teaching Assistant
+                </p>
+            </div>
+
+            <div class="work-piece">
+                <div class="work-title-with-date">
+                    <p class="work-title">
+                        Advanced Machine Learning - MSc Computer Science
+                    </p>
+                    <p class="date">
+                        2023
+                    </p>
+                </div>
+                <p class="work-subtitle">
+                    Tutorial coordinator; Guest lecturer (1 lecture); Teaching Assistant
+                </p>
+            </div>
+
+            <div class="work-piece">
+                <div class="work-title-with-date">
+                    <p class="work-title">
+                        Machine Learning - BSc Computer Science
+                    </p>
+                    <p class="date">
+                        2022
+                    </p>
+                </div>
+                <p class="work-subtitle">
+                    Tutorial coordinator; Teaching Assistant
+                </p>
+            </div>
+
+            <div class="work-piece">
+                <div class="work-title-with-date">
+                    <p class="work-title">
+                        Calculus and Linear Algebra - University College Utrecht
+                    </p>
+                    <p class="date">
+                        2019
+                    </p>
+                </div>
+                <p class="work-subtitle">
+                    Teaching Assistant
+                </p>
+            </div>
+
+
+
+            <!--     <div class="work-piece"> -->
+            <!--     <div class="work-title-with-date"> -->
+            <!--         <p class="work-title"> -->
+            <!--             Machine Learning - BSc Computer Science -->
+            <!--         </p> -->
+            <!--         <p class="date"> -->
+            <!--             2022-2023 -->
+            <!--         </p> -->
+            <!--     </div> -->
+            <!--     <p class="shortwork-title"> -->
+            <!--     Tutorial coordinator; Guest lecturer (1 lecture); Teaching Assistant -->
+            <!--     </p> -->
+            <!-- </div> -->
+
+        <p></p>
+
     </section>
 
-    <section>
-        <h2 id="old-notes-and-code">Old Notes and Code</h2>
-        <!-- Add your projects or work here -->
-    </section>
+    <!-- <section> -->
+    <!--     <h2 id="old-notes-and-code">Old Notes & Code</h2> -->
+    <!--     <\!-- Add your projects or work here -\-> -->
+    <!-- </section> -->
 
-    <section>
-        <h2 id="contact-me">Contact Me</h2>
-        <p>Email: your.email@example.com</p>
-    </section>
+    <!-- <section> -->
+    <!--     <h2 id="cv">Curriculum Vitae</h2> -->
+    <!--     <p>Email: your.email@example.com</p> -->
+    <!-- </section> -->
 
     <footer>
         <div class="social-icons">
-            <a href="mailto:your.email@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://scholar.google.com/citations?user=your-scholar-id" target="_blank"><i class="fab fa-google-scholar"></i></a>
+            <a href="mailto:f.simoes@uu.nl" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/francisco-nfq-simoes" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/francisco-simoes" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=OxSsOmsAAAAJ&hl=en" target="_blank"><i class="fab fa-google-scholar"></i></a>
         </div>
     </footer>
 
