@@ -166,6 +166,16 @@
             font-size: 11px; 
         }
 
+	.avatar img {
+	    width: 250px;
+	    height: 250px;      /* must equal width */
+	    border-radius: 50%;
+	    object-fit: cover;  /* crops instead of squashing */
+	    object-position: center; /* or "center 30%" to bias toward the face */
+	    display: block;
+	}
+
+
     </style>
 </head>
 
@@ -208,7 +218,8 @@
                 <!-- My background combines theoretical and applied work across causal inference, classical machine learning, probabilistic graphical models, and reinforcement learning. I enjoy moving between abstraction and implementation—developing ideas that are mathematically sound and testing them on real-world systems. -->
                 <!-- </p> -->
             </div>
-            <div>
+            <div class="avatar">
+                <!-- <img src="images/professionphoto_apr26.png" alt="Photo"> -->
                 <img src="images/professionalish_photo_dec2025_square_zoomed.jpg" alt="Photo">
             </div>
         </div>
